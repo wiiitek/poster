@@ -1,7 +1,7 @@
-import * as React from 'react';
+import { FC, CSSProperties } from 'react';
 
-const App: React.FC = () => {
-  const a4LandscapeStyle: React.CSSProperties = {
+const App: FC = () => {
+  const a4LandscapeStyle: CSSProperties = {
     width: '297mm',
     height: '210mm',
     backgroundColor: 'white',
