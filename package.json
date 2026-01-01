@@ -8,13 +8,9 @@
     "build": "webpack --mode production"
   },
   "keywords": [
-    "typescript",
-    "webpack",
     "a4",
     "poster"
   ],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "html-webpack-plugin": "^5.6.5",
     "ts-loader": "^9.5.4",
