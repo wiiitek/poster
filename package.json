@@ -1,27 +1,21 @@
 {
   "name": "poster",
   "version": "1.0.0",
-  "description": "A4 landscape page poster project",
+  "description": "A4 landscape page poster project with TypeScript and Webpack",
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --mode development",
     "build": "webpack --mode production"
   },
   "keywords": [
-    "react",
     "typescript",
     "webpack",
-    "a4"
+    "a4",
+    "poster"
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3"
-  },
   "devDependencies": {
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3",
     "html-webpack-plugin": "^5.6.5",
     "ts-loader": "^9.5.4",
     "typescript": "^5.9.3",

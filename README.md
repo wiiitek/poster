@@ -1,13 +1,13 @@
 # Poster
 
-A React project that displays a single white A4 page in landscape orientation (297mm x 210mm) in a web browser.
+A TypeScript project that displays a single white A4 page in landscape orientation (297mm x 210mm) in a web browser.
 
 ## Features
 
-- React with TypeScript
+- Pure TypeScript (no React, no Babel)
 - Webpack for bundling and development server
 - A4 landscape page (297mm x 210mm)
-- No Babel - TypeScript only
+- Minimal bundle size (< 1KB)
 - NPM for dependency management
 
 ## Installation
