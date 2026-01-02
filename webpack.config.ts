@@ -1,7 +1,13 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import type { Configuration } from 'webpack';
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
 
-module.exports = {
+type WebpackConfiguration = Configuration & {
+  devServer?: DevServerConfiguration;
+};
+
+const config: WebpackConfiguration = {
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -42,3 +48,5 @@ module.exports = {
     open: true
   }
 };
+
+export default config;
