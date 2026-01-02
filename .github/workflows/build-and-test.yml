@@ -27,7 +27,10 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-      - name: Cache Playwright browsers
+      - name: Get Playwright Version
+        id: playwright-version
+        run: echo "version=$(npm list @playwright/test --depth=0 --json | jq -r '.dependencies."@playwright/test".version')" >> $GITHUB_OUTPUT
+      - name: Cache Playwright Browsers
         id: playwright-cache
         uses: actions/cache@v5
         with:
