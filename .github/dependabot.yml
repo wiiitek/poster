@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/SchemaStore/schemastore/refs/heads/master/src/schemas/json/dependabot-2.0.json
+version: 2
+updates:
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+      time: '06:10'
+      timezone: Europe/Warsaw
+    labels:
+      - dependencies
+      - actions
+    open-pull-requests-limit: 10
+    groups:
+      actions-all:
+        patterns:
+          - '*'
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+      time: '07:10'
+      timezone: Europe/Warsaw
+    labels:
+      - dependencies
+      - libs
+    open-pull-requests-limit: 30
+    ignore:
+      - dependency-name: '@types/node'
+        update-types:
+          - 'version-update:semver-major'
+    groups:
+      types-node-updates:
+        patterns:
+          - '@types/node'
+        update-types:
+          - 'minor'
+          - 'patch'
+      typescript-small:
+        patterns:
+          - 'typescript'
+        update-types:
+          - 'patch'
+          - 'minor'
+      typescript-major:
+        patterns:
+          - 'typescript'
+        update-types:
+          - 'major'
+      npm-small-upgrades:
+        patterns:
+          - '*'
+        exclude-patterns:
+          - 'typescript'
+          - '@types/node'
+        update-types:
+          - 'minor'
+          - 'patch'
