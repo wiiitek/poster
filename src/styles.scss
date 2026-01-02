@@ -27,6 +27,10 @@ body {
 }
 
 @media print {
+  body {
+    background-color: initial;
+  }
+
   .page {
     width: initial;
     min-height: initial;
