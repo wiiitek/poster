@@ -21,7 +21,7 @@ npm install
 Start the webpack development server:
 
 ```bash
-npm run dev
+npm start
 ```
 
 The page will automatically open in your browser at `http://localhost:8080`.
