@@ -13,7 +13,7 @@ A TypeScript project that displays a single white A4 page in landscape orientati
 ## Installation
 
 ```bash
-npm install
+npm ci
 ```
 
 ## Development
@@ -24,7 +24,7 @@ Start the webpack development server:
 npm start
 ```
 
-The page will automatically open in your browser at `http://localhost:8080`.
+The page will be available at `http://localhost:8765`.
 
 ## Build
 
