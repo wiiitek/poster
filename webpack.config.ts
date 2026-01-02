@@ -21,39 +21,23 @@ const config: MyConfig = {
     filename: 'main.js',
     clean: true
   },
-  resolve: {
-    extensions: ['.ts', '.js']
-  },
   module: {
     rules: [
       {
         test: /\.ts$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        use: ['ts-loader'],
       },
       {
-        test: /\.scss$/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader', options: { sourceMap: true } },
-          { loader: 'sass-loader', options: { sourceMap: true } },
-        ]
-      }
-    ]
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
   ],
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist')
-    },
-    compress: true,
-    port: 8080,
-    open: true
-  }
 };
 
 export default config;
