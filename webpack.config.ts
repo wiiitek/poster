@@ -21,9 +21,6 @@ const config: MyConfig = {
     filename: 'main.js',
     clean: true
   },
-  resolve: {
-    extensions: ['.ts', '.js']
-  },
   module: {
     rules: [
       {
@@ -37,23 +34,13 @@ const config: MyConfig = {
           { loader: 'style-loader' },
           { loader: 'css-loader', options: { sourceMap: true } },
           { loader: 'sass-loader', options: { sourceMap: true } },
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
   ],
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist')
-    },
-    compress: true,
-    port: 8080,
-    open: true
-  }
 };
 
 export default config;
