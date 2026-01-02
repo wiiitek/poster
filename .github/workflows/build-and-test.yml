@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - '*'
+  pull_request:
+    branches:
+      - '*'
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron: '10 10 * * 5'  # every Friday at 10:10
@@ -11,9 +14,6 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-    
-    permissions:
-      contents: read
     
     steps:
       - name: Checkout code
