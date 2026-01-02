@@ -11,5 +11,12 @@
     "resolveJsonModule": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist"],
+  "ts-node": {
+    // for development tools like configuration and Playwright
+    // so that they are understood by NodeJS
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
 }
