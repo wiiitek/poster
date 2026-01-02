@@ -1,7 +1,7 @@
 {
   "name": "poster",
   "version": "1.0.0",
-  "description": "A4 landscape page poster project with TypeScript and Webpack",
+  "description": "A4 landscape page poster project with TypeScript and CSS",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode development --no-open --port 8765",
@@ -21,8 +21,6 @@
     "css-loader": "7.1.2",
     "html-webpack-plugin": "5.6.5",
     "http-server": "14.1.1",
-    "sass": "1.97.1",
-    "sass-loader": "16.0.6",
     "style-loader": "4.0.0",
     "ts-loader": "9.5.4",
     "ts-node": "10.9.2",
