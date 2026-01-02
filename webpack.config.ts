@@ -1,13 +1,14 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import type { Configuration } from 'webpack';
+import type { Configuration as WebpackConfiguration} from 'webpack';
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
 
-type WebpackConfiguration = Configuration & {
+// extends configuration type with devServer property
+type MyConfig = WebpackConfiguration & {
   devServer?: DevServerConfiguration;
 };
 
-const config: WebpackConfiguration = {
+const config: MyConfig = {
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
