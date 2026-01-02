@@ -1,17 +1,29 @@
-* {
+body {
   margin: 0;
   padding: 0;
+  background-color: #FAFAFA;
+}
+
+* {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
 
-body {
-  background-color: #808080;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
+.page {
+  width: 297mm;
+  height: 210mm;
+  padding: 13mm 18mm;
+  margin: 10mm auto;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+  position: relative;
+
+
+  .content {
+    background-color: rgb(121, 16, 174);
+  }
 }
 
 @page {
@@ -19,24 +31,14 @@ body {
   margin: 0;
 }
 
-.page {
-  width: 297mm;
-  height: 210mm;
-  padding: 13mm 18mm;
-  background-color: white;
-  /* for nice effect of shadow behind the page */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-}
-
 @media print {
   .page {
-    height: auto;
+    width: initial;
+    min-height: initial;
+    margin: 0;
+    border-radius: initial;
+    background: initial;
     box-shadow: initial;
-    background-color: initial;
+    page-break-after: always;
   }
-}
-
-.content {
-  background-color: #808080;
-  height: 100%;
 }
