@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
-    "module": "ES2015",
-    "lib": ["ES2015", "DOM"],
+    "target": "es2020",
+    "module": "es2020",
+    "lib": ["es2020", "DOM"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -11,12 +11,5 @@
     "resolveJsonModule": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"],
-  "ts-node": {
-    // for development tools like configuration and Playwright
-    // so that they are understood by NodeJS
-    "compilerOptions": {
-      "module": "commonjs"
-    }
-  }
+  "exclude": ["node_modules", "dist"]
 }

@@ -1,20 +1,43 @@
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
   background-color: #808080;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
 }
 
-.a4-page {
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.page {
   width: 297mm;
   height: 210mm;
-  background-color: white;
+  padding: 13mm 18mm;
+  margin: 10mm auto;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+  position: relative;
+}
+
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background-color: initial;
+  }
+
+  .page {
+    width: initial;
+    min-height: initial;
+    margin: 0;
+    border-radius: initial;
+    background: initial;
+    box-shadow: initial;
+    page-break-after: always;
+  }
 }

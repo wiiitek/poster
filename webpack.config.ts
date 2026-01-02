@@ -1,7 +1,7 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import type { Configuration as WebpackConfiguration} from 'webpack';
+import type { Configuration as WebpackConfiguration } from 'webpack';
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
 
 // Get __dirname equivalent in ES modules
@@ -15,6 +15,7 @@ type MyConfig = WebpackConfiguration & {
 
 const config: MyConfig = {
   entry: './src/index.ts',
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
@@ -33,9 +34,9 @@ const config: MyConfig = {
       {
         test: /\.scss$/,
         use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
+          { loader: 'style-loader' },
+          { loader: 'css-loader', options: { sourceMap: true } },
+          { loader: 'sass-loader', options: { sourceMap: true } },
         ]
       }
     ]

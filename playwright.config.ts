@@ -2,6 +2,8 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
+  fullyParallel: true,
+  workers: 6,
   reporter: [
     ['html', { open: 'never' }],
     ['junit', { outputFile: 'test-results/junit.xml' }]
