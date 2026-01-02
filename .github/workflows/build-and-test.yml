@@ -66,10 +66,10 @@ jobs:
           name: tests-snapshots
           path: tests/screenshot.spec.ts-snapshots
           retention-days: 1
-      - name: Test Report
-        uses: dorny/test-reporter@v2
-        if: ${{ !cancelled() }}
-        with:
-          name: Playwright Tests
-          path: test-results/junit.xml
-          reporter: jest-junit
+      # - name: Test Report
+      #   uses: dorny/test-reporter@v2
+      #   if: ${{ !cancelled() }}
+      #   with:
+      #     name: Playwright Tests
+      #     path: test-results/junit.xml
+      #     reporter: jest-junit
