@@ -1,7 +1,12 @@
 import path from 'path';
+import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import type { Configuration as WebpackConfiguration} from 'webpack';
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+
+// Get __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // extends configuration type with devServer property
 type MyConfig = WebpackConfiguration & {

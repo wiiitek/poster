@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve --mode development --no-open",
     "build": "webpack --mode production",
-    "test": "playwright test"
+    "test": "playwright test",
+    "test:report": "playwright show-report"
   },
   "keywords": [
     "a4",
