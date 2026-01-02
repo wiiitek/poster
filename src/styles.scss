@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #FAFAFA;
+  background-color: #808080;
 }
 
 * {
@@ -19,11 +19,6 @@ body {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 
   position: relative;
-
-
-  .content {
-    background-color: rgb(121, 16, 174);
-  }
 }
 
 @page {
